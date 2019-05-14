@@ -3,8 +3,11 @@
     "description": "Some components to create any HTTP Client and consume external services with PHP and Guzzle",
     "type": "metapackage",
     "require": {
-        "php": ">=5.6.0",
+        "php": "^7.2",
         "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
     },
     "license": "MIT",
     "authors": [
@@ -23,8 +26,5 @@
             "JuanDMeGon\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
-    "require-dev": {
-        "phpunit/phpunit": "^8.1"
-    }
+    "minimum-stability": "stable"
 }
