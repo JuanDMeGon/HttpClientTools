@@ -13,5 +13,15 @@
             "email": "JuanDMeGon@users.noreply.github.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "JuanDMeGon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JuanDMeGon\\Tests\\": "tests/"
+        }
+    },
     "minimum-stability": "stable"
 }
