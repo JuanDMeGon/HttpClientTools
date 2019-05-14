@@ -13,7 +13,7 @@ trait ConsumesExternalServices
     public function makeRequest($method, $requestUrl, $queryParams = [], $formParams = [], $headers = [], $hasFile = false)
     {
         $client = new Client([
-            'base_uri' => $this->baseUri,
+            'base_uri' => $this->baseUri ?? null,
         ]);
 
         if (method_exists($this, 'resolveAuthorization')) {
