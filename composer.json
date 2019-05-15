@@ -1,7 +1,7 @@
 {
     "name": "juandmegon/http-client-tools",
     "description": "Some components to create any HTTP Client and consume external services with PHP and Guzzle",
-    "type": "metapackage",
+    "type": "package",
     "require": {
         "php": "^7.2",
         "guzzlehttp/guzzle": "^6.3"
