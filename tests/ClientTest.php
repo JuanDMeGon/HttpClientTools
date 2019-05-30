@@ -9,7 +9,7 @@ class ClientTest extends TestCase
 {
     use ConsumesExternalServices;
 
-    public function testConsumesExternalServices()
+    public function testCanConsumeExternalService()
     {
         $response = $this->makeRequest('GET', 'example.com');
 
