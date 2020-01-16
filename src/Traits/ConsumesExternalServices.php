@@ -10,7 +10,7 @@ trait ConsumesExternalServices
      * Send a request to any service
      * @return string
      */
-    public function makeRequest($method, $requestUrl, $queryParams = [], $formParams = [], $headers = [], $hasFile = false)
+    public function makeRequest($method, $requestUrl, $queryParams = [], $formParams = [], $headers = [], $hasFile = false, $isJsonRequest = false)
     {
         $client = new Client([
             'base_uri' => $this->baseUri ?? null,
@@ -20,7 +20,7 @@ trait ConsumesExternalServices
             $this->resolveAuthorization($queryParams, $formParams, $headers);
         }
 
-        $bodyType = 'form_params';
+        $bodyType = $isJsonRequest ? 'json' : 'form_params';
 
         if ($hasFile) {
             $bodyType = 'multipart';
