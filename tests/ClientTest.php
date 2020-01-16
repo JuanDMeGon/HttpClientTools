@@ -2,8 +2,8 @@
 
 namespace JuanDMeGon\Test;
 
-use PHPUnit\Framework\TestCase;
 use JuanDMeGon\Traits\ConsumesExternalServices;
+use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
@@ -12,6 +12,22 @@ class ClientTest extends TestCase
     public function testCanConsumeExternalService()
     {
         $response = $this->makeRequest('GET', 'example.com');
+
+        $this->assertStringContainsString('Example', $response);
+    }
+
+    public function testCanConsumeJsonService()
+    {
+        $response = $this->makeRequest(
+            'POST',
+            'example.com',
+            [],
+            [
+                'test' => 'something',
+            ],
+            [],
+            false,
+            true);
 
         $this->assertStringContainsString('Example', $response);
     }
