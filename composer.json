@@ -3,8 +3,8 @@
     "description": "Some components to create any HTTP Client and consume external services with PHP and Guzzle",
     "type": "library",
     "require": {
-        "php": "^7.2",
-        "guzzlehttp/guzzle": "^6.3"
+        "php": "^7.2.5 || ^8.0",
+        "guzzlehttp/guzzle": "^6.3 || ^7.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.1"
